@@ -21,10 +21,10 @@ grep -rl "__PROJECT_NAME__" . | xargs sed -i "s/__PROJECT_NAME__/$PROJECT_NAME/g
 grep -rl "__PROJECT_DESCRIPTION__" . | xargs sed -i "s/__PROJECT_DESCRIPTION__/$PROJECT_DESC/g"
 
 # Rename src/app → src/<project_name>
-if [ -d "src/app" ]; then
-  mv src/app src/$PROJECT_NAME
-fi
+# if [ -d "src/app" ]; then
+#   mv src/app src/$PROJECT_NAME
+# fi
 
 echo "✅ Bootstrap completed successfully!"
 echo "👉 Your package name is now: $PROJECT_NAME"
-echo "👉 Start coding inside src/$PROJECT_NAME"
+# echo "👉 Start coding inside src/$PROJECT_NAME"

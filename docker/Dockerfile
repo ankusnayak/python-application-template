@@ -6,8 +6,11 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 COPY pyproject.toml .
-RUN pip install --upgrade pip && pip install -e .
-
 COPY src/ src/
+
+# RUN pip install --upgrade pip && pip install -e .
+RUN pip install .
+
+
 
 CMD ["python", "-m", "app.entrypoints.main"]
